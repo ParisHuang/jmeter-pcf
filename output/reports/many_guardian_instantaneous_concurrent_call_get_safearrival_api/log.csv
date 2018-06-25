@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+2018/06/25 19:39:49.784,245,Step01.Get SafeArrival API,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: safearrival-api.app.pcfdev.one.west.com,Thread Group 1-1,text,false,,2151,0,1,1,http://safearrival-api.app.pcfdev.one.west.com/,0,0,245

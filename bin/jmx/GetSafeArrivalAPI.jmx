@@ -11,21 +11,11 @@
       <stringProp name="TestPlan.user_define_classpath">..\lib\ext\json-20170516.jar</stringProp>
     </TestPlan>
     <hashTree>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables For Ohio Stage" enabled="true">
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables For PCF" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="saApiServerUrl" elementType="Argument">
-            <stringProp name="Argument.name">saApiServerUrl</stringProp>
-            <stringProp name="Argument.value">${__P(saApiServerUrl,safearrival-api.app.pcfdev.one.west.com)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="httpProtocal" elementType="Argument">
-            <stringProp name="Argument.name">httpProtocal</stringProp>
-            <stringProp name="Argument.value">${__P(apiServerHttpProtocal,http)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="protocalPort" elementType="Argument">
-            <stringProp name="Argument.name">protocalPort</stringProp>
-            <stringProp name="Argument.value">${__P(apiServerPort,)}</stringProp>
+          <elementProp name="apiServerUrl" elementType="Argument">
+            <stringProp name="Argument.name">apiServerUrl</stringProp>
+            <stringProp name="Argument.value">${__P(apiServerUrl,safearrival-api.app.pcfdev.one.west.com)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="users" elementType="Argument">
@@ -83,7 +73,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="鐢ㄦ埛瀹氫箟鐨勫彉閲�" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${saApiServerUrl}</stringProp>
+          <stringProp name="HTTPSampler.domain">${apiServerUrl}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
