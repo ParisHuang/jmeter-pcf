@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+	<link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        function TestSuite() {
+            this.TestScenarios = "";
+            this.Success = "";
+            this.Failures = "";
+            this.Skipped = "";
+            this.TotalTimes = "";
+        }
+        function TestCase() {
+            this.FeatureName = "";
+            this.ReportName = "";
+            this.RunTime = "";
+            this.TestStatus = "";
+            this.FailureMessage = "";
+        }
+        $(document).ready(function () {
+            var caseList = new Array();
+            $.ajax({
+                url: "junitLog.xml",
+                dataType: 'xml',
+                type: 'GET',
+                timeout: 2000,
+                error: function (xml) {
+                    alert("Load error");
+                },
+                success: function (xml) {
+                    var root = $(xml).find("testsuite");
+                    var testSuite = new TestSuite();
+                    testSuite.TestScenarios = root.attr("tests");
+                    testSuite.Failures = root.attr("failures");
+                    testSuite.Success = testSuite.TestScenarios - testSuite.Failures;
+                    testSuite.Skipped = root.attr("skipped");
+                    testSuite.TotalTimes = root.attr("time");
+                    var totalTime = parseInt(testSuite.TotalTimes);
+                    var tHour = parseInt(totalTime / 3600);
+                    var tMinute = parseInt(parseInt(totalTime % 3600) / 60);
+                    var tSecond = parseInt(totalTime % 3600) % 60;
+                    totalTime = tHour + " h " + tMinute + " m " + tSecond + " s";
+
+                    $(xml).find("testcase").each(function (j) {
+                        var testCase = new TestCase();
+                        testCase.FeatureName = $(this).attr("classname");
+                        testCase.ReportName = $(this).attr("name");
+                        testCase.RunTime = $(this).attr("time");
+                        testCase.TestStatus = "Success";
+
+                        $(this).find("failure").each(function (k) {
+                            testCase.TestStatus = "Failure";
+                            testCase.FailureMessage = $(this).attr("message");
+                        });
+
+                        caseList.push(testCase);
+                    });
+
+                    if (caseList.length > 0) {
+                        var content = "";
+                        content += '<table class="data-table" border="1" cellspacing="0" cellpadding="0" bgcolor="#fff2e5">' +
+                                    '<tr><th>Scenarios</th><th>Success</th><th>Failed</th><th>Ignored</th><th>Total Time</th></tr>';
+                        content += '<tr><td>' + testSuite.TestScenarios + '</td><td>' + testSuite.Success + '</td><td>' + testSuite.Failures + '</td><td>' + testSuite.Skipped + '</td><td>' + totalTime + '</td></tr></table></br>';
+
+                        var featureName = "";
+                        for (var i = 0; i < caseList.length; i++) {
+                            if (featureName != "" && caseList[i].FeatureName != featureName) {
+                                content += '</table></br>';
+                            }
+                            if (featureName == "" || featureName != caseList[i].FeatureName) {
+                                content += '<h3>Feature: <span>' + caseList[i].FeatureName + '</span></h3>' +
+                                    '<table class="data-table" border="1" cellspacing="0" cellpadding="0" width="100%">' +
+                                    '<tr><th width="35%">Test Scenarios</th><th width="10%">Test Status</th><th width="45%">Failure Message</th><th width="10%">Test Time</th></tr>';
+                            }
+                            featureName = caseList[i].FeatureName;
+
+                            var reportName = caseList[i].ReportName.replace(/\ /g, "_");
+                            content += '<tr><td width="35%">' + caseList[i].ReportName + '&nbsp;<a href="./reports/' + reportName + '/index.html" target="_blank">[show report]</a></td>';
+                            if (caseList[i].TestStatus == "Success") {
+                                content += '<td width="10%"><font color="#006600">' + caseList[i].TestStatus + '</font></td>';
+                            } else {
+                                content += '<td width="10%"><font color="#FF0000">' + caseList[i].TestStatus + '</font></td>';
+                            }
+                            
+                            var time = parseInt(caseList[i].RunTime);
+                            var hour = parseInt(time / 3600);
+                            var minute = parseInt(parseInt(time % 3600) / 60);
+                            var second = parseInt(time % 3600) % 60;
+                            time = hour + " h " + minute + " m " + second + " s";
+                            var failureMsg = caseList[i].FailureMessage.replace(/\n\t/g, "</br>");
+                            content += '<td width="45%">' + failureMsg + '</td><td width="10%">' + time + '</td></tr>';
+                        }
+                        $("#content").append(content);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1 class="title ft - medium">Performance Test Report</h1>
+        <h3>Summary</h3>
+    </div>
+    <div id="content"></div>
+</body>
+</html>

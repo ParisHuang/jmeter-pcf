@@ -1,0 +1,54 @@
+2018-06-25 10:03:42,320 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2018-06-25 10:03:42,338 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2018-06-25 10:03:42,356 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: Version 3.2 r1790748
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: java.version=1.8.0_121
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: os.name=Windows 10
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: os.arch=amd64
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: os.version=10.0
+2018-06-25 10:03:42,375 INFO o.a.j.JMeter: file.encoding=GBK
+2018-06-25 10:03:42,376 INFO o.a.j.JMeter: Max memory     =3801088000
+2018-06-25 10:03:42,376 INFO o.a.j.JMeter: Available Processors =8
+2018-06-25 10:03:42,382 INFO o.a.j.JMeter: Default Locale=English (United States)
+2018-06-25 10:03:42,382 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2018-06-25 10:03:42,382 INFO o.a.j.JMeter: JMeterHome=D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter
+2018-06-25 10:03:42,382 INFO o.a.j.JMeter: user.dir  =D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter\bin
+2018-06-25 10:03:42,382 INFO o.a.j.JMeter: PWD       =D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter\bin
+2018-06-25 10:03:51,393 INFO o.a.j.JMeter: IP: 169.254.34.223 Name: ParisHuang FullName: ParisHuang.SVTZH.com
+2018-06-25 10:03:51,775 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform]
+2018-06-25 10:03:51,779 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2018-06-25 10:03:52,959 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-06-25 10:03:52,959 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-06-25 10:03:53,472 WARN o.j.r.PluginManager: Found JAR conflict: D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter\lib\ext\jmeter-plugins-manager-0.20.jar and D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter\lib\ext\jmeter-plugins-manager-0.16.jar
+2018-06-25 10:03:55,719 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.assertions.BSFAssertion
+2018-06-25 10:03:56,097 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.extractor.BSFPostProcessor
+2018-06-25 10:03:56,119 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.modifiers.BSFPreProcessor
+2018-06-25 10:03:56,142 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-25 10:03:56,142 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-25 10:03:56,143 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-25 10:03:56,143 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-06-25 10:03:56,143 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-06-25 10:03:56,143 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-06-25 10:03:56,459 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2018-06-25 10:03:56,459 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter\bin\proxyserver.jks
+2018-06-25 10:03:56,552 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, blazemeter-debugger=0.6, jpgc-sense=3.4, jpgc-json=2.6, jpgc-plugins-manager=0.16, jmeter-core=3.2, jmeter-ftp=3.2, jmeter-http=3.2, jmeter-jdbc=3.2, jmeter-jms=3.2, jmeter-junit=3.2, jmeter-java=3.2, jmeter-ldap=3.2, jmeter-mail=3.2, jmeter-mongodb=3.2, jmeter-native=3.2, jmeter-tcp=3.2, jmeter-components=3.2]
+2018-06-25 10:03:56,561 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2018-06-25 10:03:56,624 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.java.sampler.BSFSampler
+2018-06-25 10:03:56,653 INFO o.a.j.s.FileServer: Default base='D:\SafeArrivalProject\safearrivail-jmeter\apache-jmeter\bin'
+2018-06-25 10:03:56,714 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.config.MongoSourceElement
+2018-06-25 10:03:56,714 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.sampler.MongoScriptSampler
+2018-06-25 10:03:57,062 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.timers.BSFTimer
+2018-06-25 10:03:57,077 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.visualizers.BSFListener
+2018-06-25 10:03:57,173 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-06-25 10:03:57,173 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-06-25 10:03:57,173 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-06-25 10:03:57,173 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-06-25 10:04:19,277 INFO o.a.j.g.a.Load: Loading file: C:\Users\paris.huang.SVTZH\Desktop\testjmeter-master\test.jmx
+2018-06-25 10:04:19,277 INFO o.a.j.s.FileServer: Set new base='C:\Users\paris.huang.SVTZH\Desktop\testjmeter-master'
+2018-06-25 10:04:19,375 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-06-25 10:04:19,395 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-06-25 10:04:19,396 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2018-06-25 10:04:19,398 INFO o.a.j.s.SaveService: Loading file: C:\Users\paris.huang.SVTZH\Desktop\testjmeter-master\test.jmx
+2018-06-25 10:04:19,738 INFO o.a.j.s.FileServer: Set new base='C:\Users\paris.huang.SVTZH\Desktop\testjmeter-master'

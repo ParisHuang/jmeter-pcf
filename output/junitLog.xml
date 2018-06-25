@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="125.206674">
+<testcase classname="Performance test for pcf safearrival api" name="many guardian instantaneous concurrent call get safearrival api" time="125.206674">
+<failure message="java.lang.AssertionError: There are any more error on jmeter report.&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at pcf.steps.CustomStepsForSaApi.verifyResponseTime(CustomStepsForSaApi.java:150)&#13;&#10;&#9;at ✽.Then verify the response time for all call api(ohio/stage/features/Get SafeArrival API.feature:13)&#13;&#10;"><![CDATA[Given ${users} threads is loaded............................................passed
+And ramp-up period is set to ${rampupPeriod} seconds........................passed
+And only run one time for each threads......................................passed
+And ${users} guardian login system..........................................passed
+And call safearrival api:"get SafeArrival API"..............................passed
+When call jmeter with safearrival api jmx script:"src/test/resources/jmx/GetSafeArrivalAPI.jmx".passed
+Then verify the response time for all call api..............................failed
+
+StackTrace:
+java.lang.AssertionError: There are any more error on jmeter report.
+	at org.junit.Assert.fail(Assert.java:88)
+	at pcf.steps.CustomStepsForSaApi.verifyResponseTime(CustomStepsForSaApi.java:150)
+	at ✽.Then verify the response time for all call api(ohio/stage/features/Get SafeArrival API.feature:13)
+]]></failure>
+</testcase>
+</testsuite>

@@ -1,0 +1,109 @@
+import org.xml.sax.helpers.NewInstance;
+import javax.swing.plaf.basic.BasicFileChooserUI.NewFolderAction;
+import org.jtest.util.FileHelper;
+import org.jtest.util.CsvHelper;
+import java.util.ArrayList;
+import java.util.List;
+import org.gradle.api.Project;
+
+apply plugin: 'java'
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testRuntime
+    }
+}
+
+buildscript {
+	dependencies {
+	   classpath files("libs/jtest.jar")
+	   classpath files("libs/commons-csv-1.5.jar")
+	   classpath files("libs/mysql-connector-java-6.0.6.jar")
+	   classpath files("libs/sqljdbc42.jar")
+	}
+ }
+ 
+ dependencies {
+ 	compile gradleApi()
+ 	compile fileTree(dir: 'libs', include: ['*.jar'])
+ 	//compile file('src/main/java/west/sa')
+ 	
+ 	//compile 'org.apache.commons:commons-csv:1.5'
+    compile 'info.cukes:cucumber-java:1.2.5'
+    compile 'info.cukes:cucumber-junit:1.2.5'
+    compile 'junit:junit:4.12'
+	compile 'net.sourceforge.javacsv:javacsv:2.1'
+	compile 'com.googlecode.json-simple:json-simple:1.1.1'
+	compile 'org.htmlparser:htmlparser:2.1'
+	//compile 'mysql:mysql-connector-java:6.0.6'
+	compile 'org.json:json:20170516'
+	//compile 'org.apache.httpcomponents:httpclient:4.5.3'
+	compile 'org.apache.httpcomponents:httpmime:4.5.3'
+	compile 'org.dom4j:dom4j:2.0.1'
+	compile 'com.amazonaws:aws-java-sdk-s3:1.11.172'
+	//compile group: 'org.gradle', name: 'gradle-tooling-api', version: '4.1'
+}
+
+repositories {
+    mavenCentral()
+	maven {
+		url "http://repo.boundlessgeo.com/main/"
+	}
+}
+
+task initReportAndLog() {
+	doFirst{
+	
+		System.out.println("Start init report and log*********************");
+		
+		File reportFolder = file("output/reports");
+		if (reportFolder.exists()) {
+			FileHelper.deleteDir(reportFolder);
+		}
+		FileHelper.createDir(reportFolder);
+		
+		String users = "1";
+		String rampupPeriod = "2"
+		String durationTime = "0";
+		
+		if (project.hasProperty("users")){
+			users = project.property("users").toString();
+		}
+		
+		if (project.hasProperty("rampupPeriod")){
+			rampupPeriod = project.property("rampupPeriod").toString();
+		}
+		
+		if (project.hasProperty("durationTime")){
+			durationTime = project.property("durationTime").toString();
+		}
+		
+		List<String[]> argsList = new ArrayList<String[]>();
+		String[] headers = new String[3];
+		headers[0]="users";
+		headers[1]="rampupPeriod";
+		headers[2]="durationTime";
+		argsList.add(headers);
+		String[] data = new String[3];
+		data[0]=users;
+		data[1]=rampupPeriod;
+		data[2]=durationTime;
+		argsList.add(data);
+		String argsCsv = project.projectDir;
+		argsCsv += "\\input\\args.csv";
+		CsvHelper csv = new CsvHelper(argsCsv);
+		csv.writeRecord(argsList);
+		
+		System.out.println("End init report and log*********************");
+	}	
+}
+
+task JmeterPcfTest(type:JavaExec) {
+	dependsOn build, initReportAndLog
+	doFirst {
+		main = "cucumber.api.cli.Main"
+		classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+		args = ['-p', 'junit:output/junitLog.xml', '--glue', 'pcf.steps', "-s", 'classpath:ohio/stage/features/','-t','@JmeterPcfTest']
+	}
+}
+

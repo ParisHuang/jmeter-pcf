@@ -1,0 +1,31 @@
+2017-08-11 17:00:53,837 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2017-08-11 17:00:53,847 INFO o.a.j.JMeter: Loading user properties from: E:\apache-jmeter-3.2\bin\user.properties
+2017-08-11 17:00:53,848 INFO o.a.j.JMeter: Loading system properties from: E:\apache-jmeter-3.2\bin\system.properties
+2017-08-11 17:00:53,849 INFO o.a.j.JMeter: Setting JMeter property: users=50
+2017-08-11 17:00:53,849 INFO o.a.j.JMeter: Setting JMeter property: rampup=10
+2017-08-11 17:00:53,862 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-08-11 17:00:53,862 INFO o.a.j.JMeter: Version 3.2 r1790748
+2017-08-11 17:00:53,862 INFO o.a.j.JMeter: java.version=1.8.0_121
+2017-08-11 17:00:53,862 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-08-11 17:00:53,863 INFO o.a.j.JMeter: os.name=Windows 10
+2017-08-11 17:00:53,863 INFO o.a.j.JMeter: os.arch=amd64
+2017-08-11 17:00:53,863 INFO o.a.j.JMeter: os.version=10.0
+2017-08-11 17:00:53,863 INFO o.a.j.JMeter: file.encoding=GBK
+2017-08-11 17:00:53,863 INFO o.a.j.JMeter: Max memory     =536870912
+2017-08-11 17:00:53,863 INFO o.a.j.JMeter: Available Processors =8
+2017-08-11 17:00:53,865 INFO o.a.j.JMeter: Default Locale=English (United States)
+2017-08-11 17:00:53,865 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2017-08-11 17:00:53,865 INFO o.a.j.JMeter: JMeterHome=E:\apache-jmeter-3.2
+2017-08-11 17:00:53,865 INFO o.a.j.JMeter: user.dir  =D:\EclipseDirectory\SafeArrivalWorkSpace\safearrival-jmeter\apache-jmeter
+2017-08-11 17:00:53,866 INFO o.a.j.JMeter: PWD       =D:\EclipseDirectory\SafeArrivalWorkSpace\safearrival-jmeter\apache-jmeter
+2017-08-11 17:00:53,867 INFO o.a.j.JMeter: IP: 10.169.1.102 Name: ParisHuang FullName: browserstack.com
+2017-08-11 17:00:53,868 ERROR o.a.j.JMeter: An error occurred: 
+java.lang.IllegalArgumentException: Cannot write to 'D:\EclipseDirectory\SafeArrivalWorkSpace\safearrival-jmeter\apache-jmeter\output\reports\import_50_school_attendance_data_and_send_notification' as folder does not exist and parent folder is not writable
+	at org.apache.jorphan.util.JOrphanUtils.canSafelyWriteToFolder(JOrphanUtils.java:616) ~[jorphan.jar:3.2 r1790748]
+	at org.apache.jmeter.JMeter.extractAndSetReportOutputFolder(JMeter.java:567) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.JMeter.start(JMeter.java:522) [ApacheJMeter_core.jar:3.2 r1790748]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_121]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:248) [ApacheJMeter.jar:3.2 r1790748]

@@ -1,0 +1,26 @@
+2017-05-09 13:49:22,748 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2017-05-09 13:49:22,757 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2017-05-09 13:49:22,757 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: Version 3.2 r1790748
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: java.version=1.8.0_121
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: os.name=Windows 10
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: os.arch=amd64
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: os.version=10.0
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: file.encoding=GBK
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: Max memory     =536870912
+2017-05-09 13:49:22,760 INFO o.a.j.JMeter: Available Processors =8
+2017-05-09 13:49:22,763 INFO o.a.j.JMeter: Default Locale=English (United States)
+2017-05-09 13:49:22,763 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2017-05-09 13:49:22,763 INFO o.a.j.JMeter: JMeterHome=D:\EclipseDirectory\SafeArrivalWorkSpace\safearrival-jmeter\apache-jmeter
+2017-05-09 13:49:22,763 INFO o.a.j.JMeter: user.dir  =D:\EclipseDirectory\SafeArrivalWorkSpace\safearrival-jmeter\apache-jmeter\bin
+2017-05-09 13:49:22,764 INFO o.a.j.JMeter: PWD       =D:\EclipseDirectory\SafeArrivalWorkSpace\safearrival-jmeter\apache-jmeter\bin
+2017-05-09 13:49:22,766 INFO o.a.j.JMeter: IP: 10.169.1.102 Name: ParisHuang FullName: browserstack.com
+2017-05-09 13:49:22,806 INFO o.a.j.e.RemoteJMeterEngineImpl: Starting backing engine on 1099
+2017-05-09 13:49:22,806 INFO o.a.j.e.RemoteJMeterEngineImpl: System property 'java.rmi.server.hostname' is not defined, using localHost address
+2017-05-09 13:49:22,806 INFO o.a.j.e.RemoteJMeterEngineImpl: Local IP address=10.169.1.102
+2017-05-09 13:49:22,807 INFO o.a.j.e.RemoteJMeterEngineImpl: IP address is a site-local address; this may cause problems with remote access.
+	Can be overridden by defining the system property 'java.rmi.server.hostname' - see jmeter-server script file
+2017-05-09 13:49:22,807 INFO o.a.j.e.RemoteJMeterEngineImpl: Creating RMI registry (server.rmi.create=true)
+2017-05-09 13:49:22,808 INFO o.a.j.e.RemoteJMeterEngineImpl: Bound to registry on port 1099
